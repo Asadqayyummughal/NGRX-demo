@@ -1,0 +1,53 @@
+.rapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100vw;
+
+    .counter {
+
+        h1,
+        p {
+            text-align: center;
+            font-weight: bold;
+            font-size: 2rem;
+        }
+
+
+        .counter-btns {
+
+            .btn {
+                padding: 1rem 1.5rem;
+                border-radius: 5px;
+                background-color: #f0f0f0;
+                font-size: 1rem;
+                margin: 1rem;
+                border: none;
+                font-weight: bold;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .btn:nth-child(1) {
+                background-color: #007bff;
+                color: #fff;
+            }
+
+            .btn:nth-child(2) {
+                background-color: green;
+                color: #fff;
+            }
+
+            .btn:nth-child(3) {
+                background-color: red;
+                color: #fff;
+            }
+
+
+        }
+
+    }
+}

@@ -3,7 +3,14 @@ import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
+import { provideState, provideStore } from '@ngrx/store';
+import { counterReducer } from './states/counter/counter.reducer';
+import { cartReducer } from './states/cart/cart.reducer';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration()]
+  providers: [
+    provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(),
+    provideStore(), provideState({ name: 'counter', reducer: counterReducer }),
+    provideState({ name: 'cart', reducer: cartReducer })
+  ]
 };
